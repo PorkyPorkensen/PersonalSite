@@ -1,0 +1,537 @@
+/* General Styles */
+html, body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    text-align: center;
+    height: 100%; /* Ensure the body takes up the full height of the viewport */
+    width: 100%;
+}
+
+header {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+header::after {
+    animation: appear 1s ease-in 1.25s 1 alternate both;
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    bottom: -10px; /* Position it at the bottom */
+    left: 50%; /* Start it from the center */
+    transform: translateX(-50%); /* Center it horizontally */
+    width: 70%; /* Set width to 70% */
+    border-bottom: 1px solid #8b8a8a; /* Apply the bottom border */
+}
+
+.pageHeader {
+    animation: appear 0.2s ease-in 0s 1 alternate both;
+}
+
+.pageHeaderHome {
+    animation: appear 3s ease-in 0.5s 1 alternate both;
+}
+
+.logoImg {
+    position: relative;
+    top: -20px;
+    right: -7px; 
+    width: 200px; 
+    height: auto; 
+}
+
+#root {
+    margin: 0;
+    background-color:rgb(22, 106, 139)
+}
+
+h1 {
+    font-family: Prompt, sans-serif;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    margin: 0;
+}
+
+p {
+    font-size: 20px;
+}
+
+a {
+    color: inherit;
+}
+
+i {
+    font-size: 18px;
+}
+
+/* Light and Dark Mode */
+.light {
+    color: rgb(19, 19, 19);
+    background-color: rgb(241, 251, 255);
+}
+
+.light main {
+    background-color: rgb(193, 228, 240);
+}
+
+.light .modeBtn {
+    border: 2px solid lightgray;
+}
+
+.light .projDiv {
+    background-color: rgb(193, 228, 240);
+    border: 2px solid #a3a3a3;
+}
+
+
+.norm .projDiv {
+    border: none;
+}
+
+.norm {
+    background-color: rgb(1, 0, 31);
+}
+
+.norm main {
+    background-color: rgb(0, 20, 43);
+}
+
+.norm .selfie {
+    border: 4px solid #a3a3a3;
+}
+
+.modeBtn {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #eeeded;
+}
+
+/* Main Content */
+.main {
+
+    padding-bottom: 2em;
+    flex: 1;
+    min-height: 100vh;
+}
+
+.norm main, .light main {
+    padding: 3em;
+    margin-top: 1.5em;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.main button {
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.main button:hover {
+    font-weight: bold;
+}
+
+/* About Section */
+
+.dogBtn {
+    width: 50%;
+    align-self: center;
+    border: 1px solid #1A3360;
+    background-color: #91b9d8;
+}
+
+.abt {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1.75em;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0); 
+    transition: box-shadow 0.3s ease-in-out;
+    animation: appear 1s ease-in 0.9s 1 alternate both;
+    margin: 50px;
+}
+
+.abt h1 {
+    text-align: center;
+}
+
+.selfie {
+    align-self: center;
+    width: 60%;
+    border-radius: 50%;
+    margin-bottom: 1em;
+    border: 3px solid #242323;
+    max-width: 450px;
+}
+
+.abt:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.411);
+}
+
+/* Stell Section */
+.stell {
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    width: 80%;
+}
+
+.stell img {
+    width: 80%;
+    border: 3px solid #6b6b6b;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+/* Contact Info Section */
+.conInf {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    text-align: left;
+    margin-left: 1.5em;
+}
+
+.condiv {
+    margin-top: 50px;
+    background-color:  inherit;
+    padding: 1em;
+    margin: 50px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+
+}
+
+
+/* Projects Section */
+.projDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 35px 50px;
+    padding: 1em;
+    padding-bottom: 1.5em;
+    line-height: 1.7em;
+    border-radius: 5px;
+    border: 1px solid  #8b8a8a;;
+    transition: box-shadow 0.3s ease-in-out;
+    background-color: #070E2F;
+}
+
+.projDiv img {
+    border-radius: 10px;
+    width: 300px
+}
+
+.projDiv p {
+    font-size: 16px;
+}
+
+
+/* Misc */
+.siteUrl {
+    font-size: 12px;
+    margin-top: 0;
+}
+
+.projTit {
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+
+.siteHead {
+    font-size: 44px;
+}
+
+.boxes {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+.box {
+    flex: 2;
+    height: 50px;
+    width: 20px;
+    animation: move 1s ease-in-out forwards;
+}
+
+.box-red {
+    background: #1E3A5F;
+    margin: 0;
+    float: top;
+    margin-left: -16px;
+    animation-duration: 0.7s;
+
+}
+
+.light .box-red {
+    background: #E0F7FA;
+}
+
+.box-blue {
+    background: #1A3360;
+    margin: 0;
+    float: top;
+    animation-duration: 0.8s;
+    margin-left: -16px;
+
+}
+
+.light .box-blue {
+    background: #B3E5FC;
+}
+
+
+.box-green {
+    background: #162D5C;
+    margin: 0;
+    float: top;
+    animation-duration: 0.9s;
+    margin-left: -16px;
+}
+
+.light .box-green {
+    background: #81D4FA;
+}
+
+.box-orange {
+    background: #12224F;
+    margin: 0;
+    float: top;
+    animation-duration: 1s;
+    margin-left: -16px;
+}
+
+.light .box-orange {
+    background:  #4FC3F7;
+}
+
+.box-red2 {
+    background: #0E1A45;
+    margin: 0;
+    float: top;
+    margin-left: -16px;
+    animation-duration: 1.1s;
+
+}
+
+.light .box-red2 {
+    background: #29B6F6;
+}
+
+.box-blue2 {
+    background: #0A143A ;
+    margin: 0;
+    float: top;
+    animation-duration: 1.2s;
+    margin-left: -16px;
+}
+
+.light .box-blue2 {
+    background: #039BE5 ;
+}
+
+.box-green2 {
+    background: #070E2F;
+    margin: 0;
+    float: top;
+    animation-duration: 1.3s;
+    margin-left: -16px;
+}
+
+.light .box-green2 {
+    background: #0277BD;
+}
+
+.box-orange2 {
+    background: #03071A;
+    margin: 0;
+    float: top;
+    animation-duration: 1.4s;
+    margin-left: -16px;
+}
+
+.light .box-orange2 {
+    background: #01579B;
+}
+
+.headInfo {
+    padding-top: 50px;
+    opacity: 0;
+    animation: appear 3s ease-in 0.1s 1 alternate both;
+}
+
+
+.con, .myProjs {
+    animation: appear 0.2s ease-in 0s 1 alternate both;
+}
+
+/* Keyframes */
+@keyframes move {
+    from { width: 100vw; }
+    to { width: 30px; }
+}
+
+@keyframes appear {
+    from { opacity: 0; }
+    to { opacity: 100; }
+}
+
+/* Media Queries */
+@media (min-width: 600px) and (max-width: 1024px) {
+    
+    .logoImg {
+        width: 250px;
+        right: 0;
+    }
+
+    .main button {
+        font-size: 20px;
+    }
+
+    .dogPics {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .stell img {
+        max-width: 300px;
+        max-height: 250px;
+    }
+
+    .condiv {
+        max-width: 300px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .projDiv {
+        margin: 4em;
+        padding: 2em;
+    }
+
+    nav {
+        font-size: 22px;
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+
+    .modeBtn i {
+        font-size: 15px;
+    }
+
+    .box {
+        width: 110px;
+        height: 75px;
+    }
+
+
+    @keyframes move {
+        from { width: 100vw; }
+        to { width: 40px; }
+    }
+
+    .selfie {
+        max-width: 250px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .box {
+        width: 110px;
+        height: 90px;
+    }
+
+    .abt {
+        min-width: 500px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .logoImg {
+        width: 300px;
+        right: 0;
+    }
+    
+    .main button {
+        font-size: 20px;
+        max-width: 50%;
+        align-self: center;
+    }
+
+    .dogPics {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .stell img {
+        max-width: 300px;
+        max-height: 250px;
+    }
+
+    .condiv {
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .projDiv {
+        margin: 4em;
+        padding: 2em;
+        max-width: 700px;
+    }
+
+    nav {
+        font-size: 22px;
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+
+    .modeBtn i {
+        font-size: 15px;
+    }
+    
+    .myProjs {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .abt p {
+        font-size: 24px;
+        line-height: 1.75em;
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    .selfie {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        max-width: 350px;
+    }
+
+    @keyframes move {
+        from { width: 100vw; }
+        to { width: 50px; }
+    }
+}
