@@ -1,4 +1,8 @@
 import React from "react";
+import headShot from "../images/selfie2.png"
+import stell from "../images/stella.jpg"
+import jem from "../images/jem.png"
+
 
 export default function About(){
     
@@ -12,7 +16,7 @@ export default function About(){
 
 
         <main className="abt">
-            <img className="selfie" src="../images/selfie2.png" />
+            <img className="selfie" src={headShot} />
             <p>My name is Mitchell Vieira, and I was born and raised in Barrie, Ontario, a city of approximately 150,000 residents. I attended Carleton University from 2017 to 2019, 
                 where I pursued a degree in Commerce before having to step away due to medical reasons. Since then, I have gained 
                 experience in the retail sector and spent three years with Just Junk, a local waste management company. In this 
@@ -31,8 +35,8 @@ export default function About(){
                     <div  className="stell">
                     <h3 className="doggos">Meet my Goldendoodles! Stella and Jem</h3>
                         <div className="dogPics">
-                            <img src="../images/stella.jpg" /> 
-                            <img src="../images/jem.png" /> 
+                            <img src={stell} /> 
+                            <img src={jem} /> 
                         </div>
                     </div>
                     : ""}

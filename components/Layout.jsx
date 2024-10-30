@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import LightModeContext from "../LightModeContext";
 import { Outlet, Link } from "react-router-dom";
+import darkLogo from "../images/logoBlack2.png"
+import lightLogo from "../images/logoWhite2.png"
+
 
 export default function Layout() {
   const { lightMode, setLightmode } = useContext(LightModeContext);
@@ -20,7 +23,7 @@ export default function Layout() {
       <div className="logo">
       <header>
         <div className="headInfo">
-            <img  alt="MV Logo" className="logoImg" src={ lightMode ? "../images/logoBlack2.png" : "../images/logoWhite2.png"} /> 
+            <img  alt="MV Logo" className="logoImg" src={ lightMode ? {darkLogo} : {lightLogo}} />
             <nav>
             <Link to="/">Home</Link> | <Link to="/contact">Contact</Link> | <Link to="/projects">My Projects</Link>
             </nav>
