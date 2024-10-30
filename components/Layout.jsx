@@ -23,7 +23,7 @@ export default function Layout() {
       <div className="logo">
       <header>
         <div className="headInfo">
-            <img  alt="MV Logo" className="logoImg" src={ lightMode ? {darkLogo} : {lightLogo}} />
+            <img  alt="MV Logo" className="logoImg" src={ lightMode ? `${darkLogo}` : `${lightLogo}`} />
             <nav>
             <Link to="/">Home</Link> | <Link to="/contact">Contact</Link> | <Link to="/projects">My Projects</Link>
             </nav>
