@@ -86,6 +86,9 @@ i {
     border: 2px solid #a3a3a3;
 }
 
+.norm * {
+    color: rgb(207, 207, 207)
+}
 
 .norm .projDiv {
     border: none;
@@ -141,6 +144,7 @@ i {
     align-self: center;
     border: 1px solid #1A3360;
     background-color: #91b9d8;
+    color:rgb(0, 20, 43)
 }
 
 .abt {
@@ -378,7 +382,7 @@ i {
 /* Keyframes */
 @keyframes move {
     from { width: 100vw; }
-    to { width: 30px; }
+    to { width: 10px; }
 }
 
 @keyframes appear {
@@ -389,10 +393,26 @@ i {
 /* Media Queries */
 @media (min-width: 600px) and (max-width: 1024px) {
     
-    .logoImg {
-        width: 250px;
-        right: 0;
+
+    .abt {
+        display: flex;
+        max-width: 60%;
+        min-width: 300px;
+        margin: 0 auto;
+        font-size: 0.6rem;
+        line-height: 2.5em;
+
     }
+
+    .abt p {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    .selfie {
+        margin-bottom: 4em;
+    }
+
 
     .main button {
         font-size: 20px;
@@ -442,7 +462,7 @@ i {
 
     @keyframes move {
         from { width: 100vw; }
-        to { width: 40px; }
+        to { width: 10px; }
     }
 
     .selfie {
@@ -452,21 +472,22 @@ i {
 
 @media (min-width: 1024px) {
 
+
+    
     .box {
         width: 110px;
         height: 90px;
     }
 
     .abt {
+        display: flex;
+        
+        max-width: 60%;
         min-width: 500px;
-        margin-left: 100px;
-        margin-right: 100px;
+        margin: 0 auto;
     }
 
-    .logoImg {
-        width: 300px;
-        right: 0;
-    }
+
     
     .main button {
         font-size: 20px;
@@ -495,7 +516,7 @@ i {
     .projDiv {
         margin: 4em;
         padding: 2em;
-        max-width: 700px;
+        max-width: 500px;
     }
 
     nav {
@@ -511,14 +532,16 @@ i {
     }
     
     .myProjs {
+        max-width: 1400px;;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        margin: 0 auto;
     }
 
     .abt p {
-        font-size: 24px;
+        font-size: 1.25em;
         line-height: 1.75em;
         padding-left: 4em;
         padding-right: 4em;
@@ -527,11 +550,11 @@ i {
     .selfie {
         margin-top: 50px;
         margin-bottom: 50px;
-        max-width: 350px;
+        max-width: 250px;
     }
 
     @keyframes move {
         from { width: 100vw; }
-        to { width: 50px; }
+        to { width: 10px; }
     }
 }

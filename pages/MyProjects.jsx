@@ -2,12 +2,20 @@ import React from "react";
 import moviePic from "../images/movieWL.png"
 import reactPic from "../images/reactComponents.png"
 import passPic from "../images/PassGen.png"
+import etPic from "../images/et.png"
 
 
 export default function MyProjects(){
     return (
         <div>
             <div className="myProjs">
+            <div className="projDiv">
+                <h2 className="projTit"><a href="https://et-front-end.vercel.app/">EasyTask</a></h2>
+                <p className="siteUrl"><a href="https://et-front-end.vercel.app/">https://et-front-end.vercel.app/</a></p>
+                <p>This was my first project using MongoDB / Mongoose. It is a simple to-do list app, in which you are able to create an account,
+                    add and delete tasks, as well as mark them as complete. </p>
+                    <img src={etPic} width={400}/>
+            </div>
             <div className="projDiv">
                 <h2 className="projTit"><a href="https://react-component-library-eta.vercel.app/">Reusable React Components</a></h2>
                 <p className="siteUrl"><a href="https://react-component-library-eta.vercel.app/">https://react-component-library-eta.vercel.app/</a></p>

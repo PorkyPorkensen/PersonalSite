@@ -22,10 +22,10 @@ export default function About(){
                 experience in the retail sector and spent three years with Just Junk, a local waste management company. In this 
                 role, I worked directly with customers, delivering prompt and courteous service.</p>
 
-                <p>For the past two years, I have immersed myself in frontend development through self-guided learning and structured 
-                    online courses via Scrimba. I’ve completed over 90 hours of coursework, 1,400 lessons, and a multitude of solo projects as 
-                    part of their "Frontend Career Path." I am proficient in JavaScript, React, CSS, HTML, Git and am currently delving
-                    into the worlds of TypeScript and Python.</p>
+                <p>For the past two years, I have immersed myself in web development through self-guided learning and structured 
+                    online courses. I’ve completed over 100 hours of coursework, 1,400 lessons, and a multitude of solo projects as 
+                    part of Scrimba's "Frontend Career Path". Alongside that, I have also followed along with a multitude of YouTube crash courses revolving around the MERN stack.
+                    I am proficient in JavaScript, React, NodeJS, Express, CSS, HTML, Git and am currently delving into the worlds of TypeScript and Python.</p>
 
                 <p>In addition to coding, I am passionate about gaming, WEB3 technologies, MMA, basketball, and football.</p>
 
