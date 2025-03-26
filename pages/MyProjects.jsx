@@ -2,7 +2,7 @@ import React from "react";
 import moviePic from "../images/movieWL.png"
 import reactPic from "../images/reactComponents.png"
 import passPic from "../images/PassGen.png"
-import etPic from "../images/et.png"
+import etPic from "../images/easytask.png"
 
 
 export default function MyProjects(){
