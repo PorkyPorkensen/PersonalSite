@@ -3,12 +3,22 @@ import moviePic from "../images/movieWL.png"
 import reactPic from "../images/reactComponents.png"
 import passPic from "../images/PassGen.png"
 import etPic from "../images/easytask.png"
+import lorPic from "../images/LOR.png"
 
 
 export default function MyProjects(){
     return (
         <div>
             <div className="myProjs">
+            <div className="projDiv">
+                <h2 className="projTit"><a href="https://leagueofrandom-dusky.vercel.app/">League of Random</a></h2>
+                <p className="siteUrl"><a href="https://leagueofrandom-dusky.vercel.app/">https://leagueofrandom-dusky.vercel.app/</a></p>
+                <p>An app I built for my fellow League of Legends fans. This site will help those who are overwhelmed by the 100s of champions and items
+                    by selecting a random champion along with a random build. For those who know who they want to play, but not what to build,
+                    they have the option to choose their character, and then select how random they would like their build to be. 
+                </p>
+                    <img src={lorPic} width={400}/>
+            </div>
             <div className="projDiv">
                 <h2 className="projTit"><a href="https://et-front-end.vercel.app/">EasyTask</a></h2>
                 <p className="siteUrl"><a href="https://et-front-end.vercel.app/">https://et-front-end.vercel.app/</a></p>
