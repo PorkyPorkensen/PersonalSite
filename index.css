@@ -4,10 +4,10 @@ html, body {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Rubik, sans-serif;
     color: whitesmoke;
     text-align: center;
-    height: 100%; /* Ensure the body takes up the full height of the viewport */
+    height: 100%;
     width: 100%;
 }
 
@@ -18,13 +18,17 @@ header {
 
 header::after {
     animation: appear 1s ease-in 1.25s 1 alternate both;
-    content: ''; /* Required for pseudo-elements */
+    content: '';
     position: absolute;
-    bottom: -10px; /* Position it at the bottom */
-    left: 50%; /* Start it from the center */
-    transform: translateX(-50%); /* Center it horizontally */
-    width: 70%; /* Set width to 70% */
-    border-bottom: 1px solid #8b8a8a; /* Apply the bottom border */
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    border-bottom: 1px solid #8b8a8a;
+}
+
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
 .pageHeader {
@@ -38,14 +42,23 @@ header::after {
 .logoImg {
     position: relative;
     top: -20px;
-    right: -7px; 
-    width: 200px; 
-    height: auto; 
+    right: -7px;
+    width: 200px;
+    height: auto;
 }
 
 #root {
     margin: 0;
-    background-color:rgb(22, 106, 139)
+    background-color: rgb(22, 106, 139);
+    --bg-light: #f9fafb;
+    --bg-medium: #e5e7eb;
+    --bg-accent: #dbeafe;
+    --text-dark: #111827;
+    --text-medium: #374151;
+    --text-light: #6b7280;
+    --primary: #3b82f6;
+    --primary-dark: #2051bb;
+    --accent: #4d4fb9;
 }
 
 h1 {
@@ -60,7 +73,15 @@ p {
 }
 
 a {
-    color: inherit;
+    color: #373881;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
 }
 
 i {
@@ -69,51 +90,105 @@ i {
 
 /* Light and Dark Mode */
 .light {
-    color: rgb(19, 19, 19);
-    background-color: rgb(241, 251, 255);
+    background: linear-gradient(to bottom right, #f9fafb, #eef2f7);
+    --text-dark: #1f2937;
+    --text-medium: #4b5563;
+    --text-light: #6b7280;
+    color: var(--text-dark);
 }
 
-.light main {
-    background-color: rgb(193, 228, 240);
+.light, .light * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .light .modeBtn {
     border: 2px solid lightgray;
 }
 
-.light .projDiv {
-    background-color: rgb(193, 228, 240);
-    border: 2px solid #a3a3a3;
+.light .projDiv,
+.light .abt,
+.light .condiv {
+    background-color: rgba(255, 255, 255, 0.877);
+    backdrop-filter: blur(8px);
+    border: 1px solid #373881c4;
+    box-shadow: 0 4px 10px rgba(42, 92, 172, 0.541);
 }
 
-.norm * {
-    color: rgb(207, 207, 207)
+.light .projDiv,
+.light .abt,
+.light p,
+.light h1 {
+    color: var(--text-dark);
 }
 
-.norm .projDiv {
+.light .main button,
+.light .dogBtn {
+    background-color: var(--primary);
+    color: white;
     border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.light .dogBtn:hover {
+    background-color: var(--primary-dark);
+    font-weight: 600;
+    transform: translateY(-2px);
+}
+
+.light .modeBtn:hover {
+    background-color: #e7e7e7;
+    box-shadow: 0 0 10px #3b82f6aa;
 }
 
 .norm {
-    background-color: rgb(1, 0, 31);
+    background: linear-gradient(145deg, #0f172a, #1e293b);
+}
+
+.norm * {
+    color: #e2e8f0;
+}
+
+.norm .projDiv,
+.norm .abt,
+.norm .condiv {
+    background-color: rgba(30, 41, 59, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.15);
 }
 
 .norm main {
-    background-color: rgb(0, 20, 43);
+    background-color: #1e293b;
+}
+
+.norm h1, .norm h2, .norm h3 {
+    color: #f8fafc;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.norm p {
+    color: #cbd5e1;
 }
 
 .norm .selfie {
-    border: 4px solid #a3a3a3;
+    border: 4px solid #0f172a;
 }
 
-.modeBtn {
-    border: 2px solid rgb(0, 0, 0);
-    background-color: #eeeded;
+.norm .modeBtn, .norm .dogBtn {
+    background-color: #334155;
+    color: #f8fafc;
+    border: 1px solid #64748b;
+}
+
+.norm .modeBtn:hover,
+.norm .dogBtn:hover {
+    background-color: #475569;
+    box-shadow: 0 0 10px #3b82f6aa;
 }
 
 /* Main Content */
 .main {
-
     padding-bottom: 2em;
     flex: 1;
     min-height: 100vh;
@@ -133,33 +208,24 @@ i {
     cursor: pointer;
 }
 
-.main button:hover {
-    font-weight: bold;
-}
-
 /* About Section */
-
-.dogBtn {
-    width: 50%;
-    align-self: center;
-    border: 1px solid #1A3360;
-    background-color: #91b9d8;
-    color:rgb(0, 20, 43)
-}
-
 .abt {
     display: flex;
     flex-direction: column;
     text-align: left;
     line-height: 1.75em;
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0); 
-    transition: box-shadow 0.3s ease-in-out;
-    animation: appear 1s ease-in 0.9s 1 alternate both;
-    margin: 50px;
+    margin: 0 auto;
+    max-width: 970px;
+    border-radius: 10px;
+    width: 65%;
 }
 
 .abt h1 {
     text-align: center;
+}
+
+.abt p {
+    line-height: 1.7em;
 }
 
 .selfie {
@@ -171,8 +237,8 @@ i {
     max-width: 450px;
 }
 
-.abt:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.411);
+.light .selfie {
+    border: 3px solid #373881c4;
 }
 
 /* Stell Section */
@@ -185,9 +251,10 @@ i {
 
 .stell img {
     width: 80%;
-    border: 3px solid #6b6b6b;
+    border: 3px solid #4364b3;
     margin-bottom: 20px;
     max-width: 400px;
+    border-radius: 15px;
 }
 
 /* Contact Info Section */
@@ -201,39 +268,37 @@ i {
 
 .condiv {
     margin-top: 50px;
-    background-color:  inherit;
     padding: 1em;
-    margin: 50px;
-    border-radius: 10px;
+    margin: 0 auto;
+    border-radius: 15px;
     transition: box-shadow 0.3s ease-in-out;
-
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #373881;
 }
-
 
 /* Projects Section */
 .projDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 35px 50px;
-    padding: 1em;
-    padding-bottom: 1.5em;
-    line-height: 1.7em;
-    border-radius: 5px;
-    border: 1px solid  #8b8a8a;;
-    transition: box-shadow 0.3s ease-in-out;
-    background-color: #070E2F;
+    padding: 1.5rem 2rem;
+    background-color: white;
+    border: 1px solid var(--bg-medium);
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin: 0 auto 2rem auto;
+    width: 75%;
 }
 
 .projDiv img {
     border-radius: 10px;
-    width: 300px
+    width: 300px;
 }
 
 .projDiv p {
     font-size: 16px;
+    line-height: 1.7em;
 }
-
 
 /* Misc */
 .siteUrl {
@@ -250,6 +315,7 @@ i {
     font-size: 44px;
 }
 
+/* Animated Boxes */
 .boxes {
     position: fixed;
     left: 0;
@@ -268,105 +334,23 @@ i {
     animation: move 1s ease-in-out forwards;
 }
 
-.box-red {
-    background: #1E3A5F;
-    margin: 0;
-    float: top;
-    margin-left: -16px;
-    animation-duration: 0.7s;
+.box-red { background: #1E3A5F; animation-duration: 0.7s; }
+.box-blue { background: #1A3360; animation-duration: 0.8s; }
+.box-green { background: #162D5C; animation-duration: 0.9s; }
+.box-orange { background: #12224F; animation-duration: 1s; }
+.box-red2 { background: #0E1A45; animation-duration: 1.1s; }
+.box-blue2 { background: #0A143A; animation-duration: 1.2s; }
+.box-green2 { background: #070E2F; animation-duration: 1.3s; }
+.box-orange2 { background: #03071A; animation-duration: 1.4s; }
 
-}
-
-.light .box-red {
-    background: #E0F7FA;
-}
-
-.box-blue {
-    background: #1A3360;
-    margin: 0;
-    float: top;
-    animation-duration: 0.8s;
-    margin-left: -16px;
-
-}
-
-.light .box-blue {
-    background: #B3E5FC;
-}
-
-
-.box-green {
-    background: #162D5C;
-    margin: 0;
-    float: top;
-    animation-duration: 0.9s;
-    margin-left: -16px;
-}
-
-.light .box-green {
-    background: #81D4FA;
-}
-
-.box-orange {
-    background: #12224F;
-    margin: 0;
-    float: top;
-    animation-duration: 1s;
-    margin-left: -16px;
-}
-
-.light .box-orange {
-    background:  #4FC3F7;
-}
-
-.box-red2 {
-    background: #0E1A45;
-    margin: 0;
-    float: top;
-    margin-left: -16px;
-    animation-duration: 1.1s;
-
-}
-
-.light .box-red2 {
-    background: #29B6F6;
-}
-
-.box-blue2 {
-    background: #0A143A ;
-    margin: 0;
-    float: top;
-    animation-duration: 1.2s;
-    margin-left: -16px;
-}
-
-.light .box-blue2 {
-    background: #039BE5 ;
-}
-
-.box-green2 {
-    background: #070E2F;
-    margin: 0;
-    float: top;
-    animation-duration: 1.3s;
-    margin-left: -16px;
-}
-
-.light .box-green2 {
-    background: #0277BD;
-}
-
-.box-orange2 {
-    background: #03071A;
-    margin: 0;
-    float: top;
-    animation-duration: 1.4s;
-    margin-left: -16px;
-}
-
-.light .box-orange2 {
-    background: #01579B;
-}
+.light .box-red { background: #E0F7FA; }
+.light .box-blue { background: #B3E5FC; }
+.light .box-green { background: #81D4FA; }
+.light .box-orange { background: #4FC3F7; }
+.light .box-red2 { background: #29B6F6; }
+.light .box-blue2 { background: #039BE5; }
+.light .box-green2 { background: #0277BD; }
+.light .box-orange2 { background: #01579B; }
 
 .headInfo {
     padding-top: 50px;
@@ -374,9 +358,14 @@ i {
     animation: appear 3s ease-in 0.1s 1 alternate both;
 }
 
-
-.con, .myProjs {
+.con, .myProjs, .abt {
     animation: appear 0.2s ease-in 0s 1 alternate both;
+}
+
+.selfie:hover, .stell:hover, .projDiv img:hover {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
 }
 
 /* Keyframes */
@@ -392,37 +381,25 @@ i {
 
 /* Media Queries */
 @media (min-width: 600px) and (max-width: 1024px) {
-    
-
     .abt {
-        display: flex;
         max-width: 60%;
         min-width: 300px;
-        margin: 0 auto;
         font-size: 0.6rem;
         line-height: 2.5em;
-
     }
 
     .abt p {
-        padding-left: 1.5em;
-        padding-right: 1.5em;
+        padding: 0 1.5em;
     }
-
-    .selfie {
-        margin-bottom: 4em;
-    }
-
 
     .main button {
         font-size: 20px;
     }
 
-    .dogPics {
+    .dogPics, .condiv {
         display: flex;
-        align-items: center;
         justify-content: center;
-        gap: 2em;
+        align-items: center;
     }
 
     .stell img {
@@ -431,23 +408,13 @@ i {
     }
 
     .condiv {
-        max-width: 300px;
+        max-width: 375px;
         text-align: center;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .projDiv {
         margin: 4em;
         padding: 2em;
-    }
-
-    nav {
-        font-size: 22px;
-    }
-
-    nav a {
-        text-decoration: none;
     }
 
     .modeBtn i {
@@ -459,36 +426,18 @@ i {
         height: 75px;
     }
 
-
-    @keyframes move {
-        from { width: 100vw; }
-        to { width: 10px; }
-    }
-
     .selfie {
         max-width: 250px;
+        margin-bottom: 4em;
     }
 }
 
 @media (min-width: 1024px) {
-
-
-    
-    .box {
-        width: 110px;
-        height: 90px;
-    }
-
     .abt {
-        display: flex;
-        
         max-width: 60%;
         min-width: 500px;
-        margin: 0 auto;
     }
 
-
-    
     .main button {
         font-size: 20px;
         max-width: 50%;
@@ -497,8 +446,8 @@ i {
 
     .dogPics {
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         gap: 2em;
     }
 
@@ -508,9 +457,7 @@ i {
     }
 
     .condiv {
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 375px;
     }
 
     .projDiv {
@@ -519,23 +466,14 @@ i {
         max-width: 500px;
     }
 
-    nav {
-        font-size: 22px;
-    }
-
-    nav a {
-        text-decoration: none;
-    }
-
     .modeBtn i {
         font-size: 15px;
     }
-    
+
     .myProjs {
-        max-width: 1400px;;
+        max-width: 1400px;
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
         justify-content: center;
         margin: 0 auto;
     }
@@ -543,18 +481,16 @@ i {
     .abt p {
         font-size: 1.25em;
         line-height: 1.75em;
-        padding-left: 4em;
-        padding-right: 4em;
+        padding: 0 4em;
     }
 
     .selfie {
-        margin-top: 50px;
-        margin-bottom: 50px;
+        margin: 50px 0;
         max-width: 250px;
     }
 
-    @keyframes move {
-        from { width: 100vw; }
-        to { width: 10px; }
+    .box {
+        width: 110px;
+        height: 90px;
     }
 }
