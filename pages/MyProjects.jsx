@@ -17,21 +17,21 @@ export default function MyProjects(){
                     by selecting a random champion along with a random build. For those who know who they want to play, but not what to build,
                     they have the option to choose their character, and then select how random they would like their build to be. 
                 </p>
-                    <img src={lorPic} width={400}/>
+                   <a href="https://leagueofrandom-dusky.vercel.app/" target="_blank" rel="noopener noreferrer"> <img src={lorPic} width={400}/></a>
             </div>
             <div className="projDiv">
                 <h2 className="projTit"><a href="https://et-front-end.vercel.app/">EasyTask</a></h2>
                 <p className="siteUrl"><a href="https://et-front-end.vercel.app/">https://et-front-end.vercel.app/</a></p>
                 <p>This was my first project using MongoDB / Mongoose as well as my first time venturing into JSON Web Tokens. It is a simple to-do list app, in which you are able to create an account,
                     add and delete tasks, as well as mark them as complete. </p>
-                    <img src={etPic} width={400}/>
+                    <a href="https://et-front-end.vercel.app/" target="_blank" rel="noopener noreferrer"><img src={etPic} width={400}/></a>
             </div>
             <div className="projDiv">
                 <h2 className="projTit"><a href="https://react-component-library-eta.vercel.app/">Reusable React Components</a></h2>
                 <p className="siteUrl"><a href="https://react-component-library-eta.vercel.app/">https://react-component-library-eta.vercel.app/</a></p>
                 <p>These are a collection of reusable Badges, Banners, Testimonials, and Pop-up Cards made
                     in React. Each with multiple variants and customizable props. </p>
-                    <img src={reactPic} width={400}/>
+                   <a href="https://react-component-library-eta.vercel.app/" target="_blank" rel="noopener noreferrer"><img src={reactPic} width={400}/></a>
             </div>
             <div className="projDiv">
                 <h2 className="projTit"><a href="https://porkyporkensen-github-io.vercel.app/">Movie Search/Watchlist Maker</a></h2>
@@ -41,7 +41,7 @@ export default function MyProjects(){
                     its IMDB rating. From there you are able to save to a watchlist which is stored in LocalStorage. I also
                     included a page which returns a random movie or TV series for those who are feeling like watching something
                     new.</p>
-                    <img src={moviePic} width={400}/>
+                    <a href="https://porkyporkensen-github-io.vercel.app/" target="_blank" rel="noopener noreferrer"><img src={moviePic} width={400}/></a>
             </div>
             <div className="projDiv">
                 <h2 className="projTit"><a href="https://pass-generator-green.vercel.app/">Password Generator</a></h2>
@@ -51,7 +51,7 @@ export default function MyProjects(){
                     numbers, and/or special characters. Simply click on the password which is returned and it will copy
                     to your clipboard!
                 </p>
-                    <img src={passPic} width={400}/>
+                    <a href="https://pass-generator-green.vercel.app/" target="_blank" rel="noopener noreferrer"><img src={passPic} width={400}/></a>
             </div>
             </div> 
             <h2>+ Many more to come...</h2>          
