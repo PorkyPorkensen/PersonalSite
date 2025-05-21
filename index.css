@@ -399,12 +399,14 @@ i {
     .dogPics, .condiv {
         display: flex;
         justify-content: center;
-        align-items: center;
-    }
+        justify-content: space-around;
 
+    }
+    .doggos {
+        font-size: 2em;
+    }
     .stell img {
-        max-width: 300px;
-        max-height: 250px;
+        width: 40%;
     }
 
     .condiv {
