@@ -22,7 +22,7 @@ export default function MyProjects(){
             <div className="projDiv">
                 <h2 className="projTit"><a href="https://et-front-end.vercel.app/">EasyTask</a></h2>
                 <p className="siteUrl"><a href="https://et-front-end.vercel.app/">https://et-front-end.vercel.app/</a></p>
-                <p>This was my first project using MongoDB / Mongoose as well as my first time venturing into JSON Web Tokens. It is a simple to-do list app, in which you are able to create an account,
+                <p>CURRENTLY DOWN UNTIL I RENEW RAILWAY SUBSCRIPTION // This was my first project using MongoDB / Mongoose as well as my first time venturing into JSON Web Tokens. It is a simple to-do list app, in which you are able to create an account,
                     add and delete tasks, as well as mark them as complete. </p>
                     <a href="https://et-front-end.vercel.app/" target="_blank" rel="noopener noreferrer"><img src={etPic} width={400}/></a>
             </div>
