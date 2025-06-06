@@ -4,6 +4,7 @@ import reactPic from "../images/reactComponents.png"
 import passPic from "../images/PassGen.png"
 import etPic from "../images/easytask.png"
 import lorPic from "../images/LOR.png"
+import BBpic from "../images/BB.png"
 
 
 export default function MyProjects(){
@@ -18,6 +19,14 @@ export default function MyProjects(){
                     they have the option to choose their character, and then select how random they would like their build to be. 
                 </p>
                    <a href="https://leagueofrandom-dusky.vercel.app/" target="_blank" rel="noopener noreferrer"> <img src={lorPic} width={400}/></a>
+            </div>
+                <div className="projDiv">
+                <h2 className="projTit"><a href="https://burgerbros-site.vercel.app/">BurgerBros</a></h2>
+                <p className="siteUrl"><a href="https://burgerbros-site.vercel.app/">https://burgerbros-site.vercel.app/</a></p>
+                <p>This is a fictional restaraunt I built using a combination of classic React, JS, Firebase, and EmailJS. Comes with a working cart system, a catering request form and an entire
+                    backend app which allows the "owners" to add items, manage items, delete items, as well as give access to other employees to the backend. 
+                </p>
+                   <a href="https://burgerbros-site.vercel.app/" target="_blank" rel="noopener noreferrer"> <img src={BBpic} width={400}/></a>
             </div>
             <div className="projDiv">
                 <h2 className="projTit"><a href="https://et-front-end.vercel.app/">EasyTask</a></h2>
