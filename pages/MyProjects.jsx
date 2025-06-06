@@ -4,7 +4,7 @@ import reactPic from "../images/reactComponents.png"
 import passPic from "../images/PassGen.png"
 import etPic from "../images/easytask.png"
 import lorPic from "../images/LOR.png"
-import BBpic from "../images/BB.png"
+import BBpic from "../images/BBpng.png"
 
 
 export default function MyProjects(){
