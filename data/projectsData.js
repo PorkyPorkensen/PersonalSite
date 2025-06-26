@@ -11,7 +11,7 @@ const projects = [
     {
     title: "Crossing Quizzes",
     link: "https://ac-quiz.vercel.app/",
-    description: `Using the Nookipedia API I made this quiz where users will be asked questions about a random Villager's personality, star sign and more. Users
+    description: `Using the Nookipedia API I made this Animal Crossing quiz where users will be asked questions about a random Villager's personality, star sign and more. Users
     are given 4 attempts daily and must score 2/3 answers correct in order to continue. Outside of that, nothing too crazy with this one!`,
     image: cqPic,
   },
