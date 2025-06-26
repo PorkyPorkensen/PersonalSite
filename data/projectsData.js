@@ -4,8 +4,17 @@ import passPic from "../images/PassGen.png"
 import etPic from "../images/easytask.png"
 import lorPic from "../images/LOR.png"
 import BBpic from "../images/BBpng.png"
+import cqPic from '../images/cq.png'
 
 const projects = [
+  
+    {
+    title: "Crossing Quizzes",
+    link: "https://ac-quiz.vercel.app/",
+    description: `Using the Nookipedia API I made this quiz where users will be asked questions about a random Villager's personality, star sign and more. Users
+    are given 4 attempts daily and must score 2/3 answers correct in order to continue. Outside of that, nothing too crazy with this one!`,
+    image: cqPic,
+  },
   {
     title: "League of Random",
     link: "https://leagueofrandom-dusky.vercel.app/",
