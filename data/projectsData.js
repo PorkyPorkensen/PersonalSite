@@ -6,8 +6,15 @@ import lorPic from "../images/LOR.png"
 import BBpic from "../images/BBpng.png"
 import cqPic from '../images/cq.png'
 import dentPic from '../images/dent.png'
+import mcPic from '../images/mc.png'
 
 const projects = [
+  {
+    title: "MoreCoin",
+    link: "https://more-coin.vercel.app/",
+    description: `Another fictional business this one takes place in the Web3 space. Introducing MoreCoin, my fictional memecoin equipped with AI written documentation, whipped up in a few hours, just like most memecoins!`,
+    image: mcPic,
+  },  
   {
     title: "Barrie Dental",
     link: "https://dent-site.vercel.app/",
