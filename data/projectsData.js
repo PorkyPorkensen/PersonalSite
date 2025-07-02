@@ -5,10 +5,16 @@ import etPic from "../images/easytask.png"
 import lorPic from "../images/LOR.png"
 import BBpic from "../images/BBpng.png"
 import cqPic from '../images/cq.png'
+import dentPic from '../images/dent.png'
 
 const projects = [
-  
-    {
+  {
+    title: "Barrie Dental",
+    link: "https://dent-site.vercel.app/",
+    description: `Similarly to BurgerBros this is another fictional business, this time a dentistry. This one is frontend only however, and was moreso to test my design skills. This was my first time using LottieFiles and Haikei for animations and backgrounds respectively.`,
+    image: dentPic,
+  },
+  {
     title: "Crossing Quizzes",
     link: "https://ac-quiz.vercel.app/",
     description: `Using the Nookipedia API I made this Animal Crossing quiz where users will be asked questions about a random Villager's personality, star sign and more. Users
