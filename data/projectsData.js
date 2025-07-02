@@ -12,7 +12,7 @@ const projects = [
   {
     title: "MoreCoin",
     link: "https://more-coin.vercel.app/",
-    description: `Another fictional business this one takes place in the Web3 space. Introducing MoreCoin, my fictional memecoin equipped with AI written documentation, whipped up in a few hours, just like most memecoins!`,
+    description: `Another fictional business. This one takes place in the Web3 space. Introducing MoreCoin, my fictional memecoin equipped with AI written documentation, whipped up in a few hours, just like most memecoins!`,
     image: mcPic,
   },  
   {
