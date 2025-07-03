@@ -2,6 +2,8 @@ import React from "react";
 import headShot from "../images/selfie2.png"
 import stell from "../images/stella.jpg"
 import jem from "../images/jem.png"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 export default function About(){
@@ -15,7 +17,7 @@ export default function About(){
         <>
 
 
-        <main className="abt">
+        <main className="abt" data-aos="zoom-in-up">
             <img className="selfie" src={headShot} />
             <p>My name is Mitchell Vieira, and I was born and raised in Barrie, Ontario, a city of approximately 150,000 residents. I attended Carleton University from 2017 to 2019, 
                 where I pursued a degree in Commerce before having to step away due to medical reasons. Since then, I have gained 

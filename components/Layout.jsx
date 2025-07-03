@@ -10,16 +10,6 @@ export default function Layout() {
 
   return (
     <div className={`main ${lightMode ? "light" : "norm"}`}>
-            <div className="boxes">
-              <div className="box box-red"></div>
-              <div className="box box-blue"></div>
-              <div className="box box-green"></div>
-              <div className="box box-orange"></div>
-              <div className="box box-red2"></div>
-              <div className="box box-blue2"></div>
-              <div className="box box-green2"></div>
-              <div className="box box-orange2"></div>
-            </div>
       <div className="logo">
       <header>
         <div className="headInfo">

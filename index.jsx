@@ -6,9 +6,16 @@ import About from "./pages/About"
 import MyProjects from "./pages/MyProjects"
 import Contact from "./pages/Contact"
 import { LightModeProvider } from "./LightModeContext"
+import AOS from "aos";
 
 
 function App() {
+    React.useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
   return (
     <BrowserRouter>
       <LightModeProvider>

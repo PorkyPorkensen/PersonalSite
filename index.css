@@ -49,16 +49,8 @@ header::after {
 
 #root {
     margin: 0;
-    background-color: rgb(22, 106, 139);
-    --bg-light: #f9fafb;
-    --bg-medium: #e5e7eb;
-    --bg-accent: #dbeafe;
-    --text-dark: #111827;
-    --text-medium: #374151;
-    --text-light: #6b7280;
-    --primary: #3b82f6;
-    --primary-dark: #2051bb;
-    --accent: #4d4fb9;
+  background: url('/images/darkWave.svg') no-repeat center top;
+  background-size: cover;
 }
 
 h1 {
@@ -90,11 +82,9 @@ i {
 
 /* Light and Dark Mode */
 .light {
-    background: linear-gradient(to bottom right, #f9fafb, #eef2f7);
-    --text-dark: #1f2937;
-    --text-medium: #4b5563;
-    --text-light: #6b7280;
-    color: var(--text-dark);
+  background: url('/images/lightWave.svg') no-repeat center top;
+  background-size: cover;
+  color: #101a22;
 }
 
 .light, .light * {
@@ -108,24 +98,24 @@ i {
 .light .projDiv,
 .light .abt,
 .light .condiv {
-    background-color: rgba(255, 255, 255, 0.877);
+    background-color: rgba(255, 255, 255, 0.836);
     backdrop-filter: blur(8px);
-    border: 1px solid #373881c4;
-    box-shadow: 0 4px 10px rgba(42, 92, 172, 0.541);
+    border: 1px solid #4f4f52c4;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.829);
 }
 
 .light .projDiv,
 .light .abt,
 .light p,
 .light h1 {
-    color: var(--text-dark);
+    color:#1b1b1b;
 }
 
 .light .main button,
 .light .dogBtn {
     background-color: var(--primary);
-    color: white;
-    border: none;
+    color: rgb(34, 34, 34);
+    border: 1px solid #4f4f52c4;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -133,15 +123,17 @@ i {
     background-color: var(--primary-dark);
     font-weight: 600;
     transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.418);
 }
 
 .light .modeBtn:hover {
     background-color: #e7e7e7;
-    box-shadow: 0 0 10px #3b82f6aa;
+    box-shadow: 0 0 10px #242424aa;
 }
 
 .norm {
-    background: linear-gradient(145deg, #0f172a, #1e293b);
+      background: url('/images/darkWave.svg') no-repeat center top;
+  background-size: cover;
 }
 
 .norm * {
@@ -151,10 +143,10 @@ i {
 .norm .projDiv,
 .norm .abt,
 .norm .condiv {
-    background-color: rgba(30, 41, 59, 0.85);
-    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.459);
+    backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.829);
 }
 
 .norm main {
@@ -176,15 +168,19 @@ i {
 }
 
 .norm .modeBtn, .norm .dogBtn {
-    background-color: #334155;
+    background-color: rgba(0, 0, 0, 0.459);
     color: #f8fafc;
     border: 1px solid #64748b;
 }
 
 .norm .modeBtn:hover,
 .norm .dogBtn:hover {
-    background-color: #475569;
-    box-shadow: 0 0 10px #3b82f6aa;
+    background-color: rgba(31, 31, 31, 0.459);
+    box-shadow: 0 0 10px #2c2c2caa;
+}
+
+.norm .dogBtn, .light .dogBtn {
+    padding: 1em 2em
 }
 
 /* Main Content */
@@ -215,7 +211,7 @@ i {
     text-align: left;
     line-height: 1.75em;
     margin: 0 auto;
-    max-width: 970px;
+    max-width: 800px;
     border-radius: 10px;
     width: 65%;
 }
@@ -238,7 +234,7 @@ i {
 }
 
 .light .selfie {
-    border: 3px solid #373881c4;
+    border: 3px solid #3b3b3bc4;
 }
 
 /* Stell Section */
@@ -251,7 +247,7 @@ i {
 
 .stell img {
     width: 80%;
-    border: 3px solid #4364b3;
+    border: 3px solid #1b1b1b;
     margin-bottom: 20px;
     max-width: 400px;
     border-radius: 15px;
@@ -272,10 +268,11 @@ i {
     margin: 0 auto;
     border-radius: 15px;
     transition: box-shadow 0.3s ease-in-out;
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     border: 2px solid #373881;
+    
 }
 
 /* Projects Section */
@@ -293,6 +290,7 @@ i {
 .projDiv img {
     border-radius: 10px;
     width: 300px;
+    border: 1px solid #1b1b1b;
 }
 
 .projDiv p {
@@ -311,46 +309,12 @@ i {
     font-size: 28px;
 }
 
+
+
 .siteHead {
     font-size: 44px;
 }
 
-/* Animated Boxes */
-.boxes {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 25px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    z-index: 9999;
-}
-
-.box {
-    flex: 2;
-    height: 50px;
-    width: 20px;
-    animation: move 1s ease-in-out forwards;
-}
-
-.box-red { background: #1E3A5F; animation-duration: 0.7s; }
-.box-blue { background: #1A3360; animation-duration: 0.8s; }
-.box-green { background: #162D5C; animation-duration: 0.9s; }
-.box-orange { background: #12224F; animation-duration: 1s; }
-.box-red2 { background: #0E1A45; animation-duration: 1.1s; }
-.box-blue2 { background: #0A143A; animation-duration: 1.2s; }
-.box-green2 { background: #070E2F; animation-duration: 1.3s; }
-.box-orange2 { background: #03071A; animation-duration: 1.4s; }
-
-.light .box-red { background: #E0F7FA; }
-.light .box-blue { background: #B3E5FC; }
-.light .box-green { background: #81D4FA; }
-.light .box-orange { background: #4FC3F7; }
-.light .box-red2 { background: #29B6F6; }
-.light .box-blue2 { background: #039BE5; }
-.light .box-green2 { background: #0277BD; }
-.light .box-orange2 { background: #01579B; }
 
 .headInfo {
     padding-top: 50px;
@@ -358,14 +322,15 @@ i {
     animation: appear 3s ease-in 0.1s 1 alternate both;
 }
 
-.con, .myProjs, .abt {
-    animation: appear 0.2s ease-in 0s 1 alternate both;
-}
 
-.selfie:hover, .stell:hover, .projDiv img:hover {
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+.selfie:hover, .projDiv img:hover {
+    box-shadow: 0 0 15px rgba(54, 54, 54, 0.459);
     transform: scale(1.02);
     transition: all 0.3s ease;
+}
+
+.light a {
+    color: #252525;
 }
 
 /* Keyframes */
@@ -436,7 +401,7 @@ i {
 
 @media (min-width: 1024px) {
     .abt {
-        max-width: 60%;
+        max-width: 800px;
         min-width: 500px;
     }
 
