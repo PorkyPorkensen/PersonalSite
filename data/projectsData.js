@@ -7,8 +7,15 @@ import BBpic from "../images/BBpng.png"
 import cqPic from '../images/cq.png'
 import dentPic from '../images/dent.png'
 import mcPic from '../images/mc.png'
+import SSPic from '../images/SS.png'
 
 const projects = [
+    {
+    title: "SOLScanner",
+    link: "https://sl-frontend-psi.vercel.app/",
+    description: `SolScanner is a React-based web app that lets users track the real-time value of any Solana wallet. It fetches token balances, enriches them with metadata from the SPL Token Registry and CoinGecko, filters out dust tokens, and displays portfolio value alongside a responsive pie chart. Built with React, JavaScript, Axios, @solana/web3.js, @solana/spl-token-registry, CoinGecko API, and Recharts.`,
+    image: SSPic,
+  }, 
   {
     title: "MoreCoin",
     link: "https://more-coin.vercel.app/",
