@@ -8,9 +8,16 @@ import cqPic from '../images/cq.png'
 import dentPic from '../images/dent.png'
 import mcPic from '../images/mc.png'
 import SSPic from '../images/SS.png'
+import ttPic from '../images/tt.png'
 
 const projects = [
     {
+    title: "TCG Tracker",
+    link: "https://www.tcgtracker.ca/",
+    description: `TCG Tracker is a web app for tracking the value of Pokémon TCG cards. On the homepage you can search for both previous (via scraping) and active (via their browse API) listings on eBay. From there you can add cards to your "portfolio" where a total estimated value is calculated based on the average current market price of each card. This App was built using React, JavaScript, Axios, Express, Firebase, PokemonTCG API, eBay's Browse API, and Cheerio for scraping.`,
+    image: ttPic,
+  }, 
+  {
     title: "SOLScanner",
     link: "https://sl-frontend-psi.vercel.app/",
     description: `SolScanner is a React-based web app that lets users track the real-time value of any Solana wallet. It fetches token balances, enriches them with metadata from the SPL Token Registry and CoinGecko, filters out dust tokens, and displays portfolio value alongside a responsive pie chart. Built with React, JavaScript, Axios, @solana/web3.js, @solana/spl-token-registry, CoinGecko API, and Recharts.`,
